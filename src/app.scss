@@ -10,13 +10,13 @@
         scrollbar-width: none;
         &::-webkit-scrollbar{
             display: none;
-            
+
         }
         > *{
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
-            
+            font-size: 1px;
         }
        
         
