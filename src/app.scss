@@ -1,4 +1,4 @@
-.app{
+/* .app{
     height: 100vh;
 
     .sections{
@@ -12,15 +12,42 @@
             display: none;
 
         }
-        > *{
+        >*{
             width: 100vw;
             height: calc(100vh - 70px);
             scroll-snap-align: start;
             font-size: 1px;
-        }
-       
-        
+        }   
     }
-    
-    
+} */
+
+//so I can't figure out why this code doesn't work(the scroll bar and the scroll snap properties even though it's almost the exact same but maybe it's a selectors or parent-child stuff that i currently don't 
+//understand but i'll leave original and Jay's code just for the sake of comparing later...but still note to myself 
+
+*{
+    scroll-behavior: smooth;
+}
+
+.app{
+    height: 100vh;
+
+.sections{
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: salmon;
+    position: relative;
+    top: 70px;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    >*{
+        width: 100vw;
+        height: calc(100vh - 70px);
+        scroll-snap-align: start;
+    }
+}
+
 }
